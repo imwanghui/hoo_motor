@@ -17,7 +17,7 @@ title: Hoo! Motor.最新最全的超跑摩托信息收集平台
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Hoo! Motor.最新最全的超跑摩托信息收集平台
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/hoo_motor" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
