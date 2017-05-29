@@ -1,0 +1,73 @@
+<div class="arriv">
+  <div class="container">
+    <div class="arriv-top">
+      {% assign top1 = site.tags.top1 %}
+        <div class="col-md-6 arriv-left">
+          <img src="{{ top1[0].image_path }}/{{ top1[0].special_image }}" class="img-responsive" alt="">
+          <div class="arriv-info">
+            <h3>{{ top1[0].title }}</h3>
+            <p>{{ top1[0].desc }}</p>
+            <div class="crt-btn">
+              <a href="{{ top1[0].url }}">查看详情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 arriv-right">
+          <img src="{{ top1[1].image_path }}/{{ top1[1].special_image }}" class="img-responsive" alt="">
+          <div class="arriv-info">
+            <h3>{{ top1[1].title }}</h3>
+            <p>{{ top1[1].desc }}</p>
+            <div class="crt-btn">
+              <a href="{{ top1[1].url }}">查看详情</a>
+            </div>
+          </div>
+        </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="arriv-bottm">
+      <div class="col-md-8 arriv-left1">
+        {% assign top2 = site.tags.top2 %}
+        <img src="{{ top2[0].image_path }}/{{ top2[0].special_image }}" class="img-responsive" alt="">
+        <div class="arriv-info1">
+          <h3></h3>
+          <p>{{ top2[0].title }}</p>
+          <div class="crt-btn">
+            <a href="{{ top2[0].url }}">查看详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 arriv-right1">
+        <img src="{{ top2[1].image_path }}/{{ top2[1].special_image }}" class="img-responsive" alt="">
+        <div class="arriv-info2" style="text-align: center">
+          <a href="{{ top2[1].url }}"><h3>查看详情<i class="ars"></i></h3></a>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="arriv-las">
+    {% assign top3 = site.tags.top3 %}
+      <div class="col-md-4 arriv-left2">
+        <img src="{{ top3[0].image_path }}/{{ top3[0].special_image }}" class="img-responsive" alt="">
+        <div class="arriv-info2">
+          <a href="{{ top3[0].url }}"><h3>查看详情<i class="ars"></i></h3></a>
+        </div>
+      </div>
+      <div class="col-md-4 arriv-middle">
+        <img src="{{ top3[1].image_path }}/{{ top3[1].special_image }}" class="img-responsive" alt="">
+        <div class="arriv-info3">
+          <h3>{{ top3[1].title }}</h3>
+          <div class="crt-btn">
+            <a href="{{ top3[1].url }}">查看详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 arriv-right2">
+        <img src="{{ top3[2].image_path }}/{{ top3[2].special_image }}" class="img-responsive" alt="">
+        <div class="arriv-info2">
+          <a href="{{ top3[2].url }}"><h3>查看详情<i class="ars"></i></h3></a>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>

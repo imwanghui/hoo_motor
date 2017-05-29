@@ -1,0 +1,16 @@
+      <div class="w_sidebar">
+        <div class="w_nav1">
+          <h4>微信客服</h4>
+          <img src="/images/kefu.png" class="img-responsive" />
+        </div>
+        <section  class="sky-form">
+          <h4>All</h4>
+          <div class="w_nav1">
+            <ul>
+              {% for brand in site.data.brands %}
+              <li><a href="/c/{{brand.category}}">{{ brand.category }}</a></li>
+              {% endfor%}
+            </ul>
+          </div>
+        </section>
+      </div>

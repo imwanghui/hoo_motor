@@ -1,0 +1,55 @@
+---
+layout: detail
+---
+<div class="container">
+    <div class="women_main">
+        <!-- start content -->
+        <div class="row single">
+            <div class="col-md-9 det">
+              <div class="single_left">
+                <div class="grid images_3_of_2">
+                    <ul id="etalage">
+                        {% for image in site.data.images[page.image_group] %}
+                        <li>
+                            <img class="etalage_thumb_image" src="{{ page.image_path }}/{{ image }}" class="img-responsive" />
+                            <img class="etalage_source_image" src="{{ page.image_path }}/{{ image }}" class="img-responsive" title="" />
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="desc1 span_3_of_2">
+                    <h3>{{ page.title }}</h3>
+                    <span class="brand">品牌: <a href="#">{{ page.brand }}</a></span>
+                    <br>
+                    {% for other in page.others %}
+                    <span class="code">{{ other[0] }}: {{ other[1] }}</span><br />
+                    {% endfor %}
+                    <div class="price">
+                        <span class="text">参考价:</span>
+                        <span class="price-new">¥{{ page.discount_price }}</span><span class="price-old">¥{{ page.origin_price }}</span>
+                    </div>
+                    <div class="det_nav1">
+                        <h4>颜色 :</h4>
+                        <div class=" sky-form col col-4">
+                            <ul>
+                                <li><label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>{{ page.color }}</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="single-bottom1">
+                <h6>详细信息</h6>
+                <p class="prod-desc">{{ content }} {% include photo_list.html %} </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+          {% include sidebar.html %}
+      </div>
+      <div class="clearfix"></div>
+  </div>
+  <!-- end content -->
+</div>
+</div>

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<!-- content -->
+<div class="container">
+  <div class="women_main">
+    <!-- start sidebar -->
+    <div class="col-md-3 s-d">
+      {% include sidebar.html %}
+    </div>
+    <!-- start content -->
+    <div class="col-md-9 w_content">
+      <div class="women">
+        <a href="#"><h4>{{ page.title }}</h4></a>
+        <ul class="w_nav">
+          <li>Total : </li>
+          <li><a class="active" href="#">{{site.categories[page.tag].size}}</a></li> |
+          <li>Sort : </li>
+          <li><a class="active" href="#">popular</a></li>
+          <div class="clear"></div>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!-- grids_of_4 -->
+      {% for post in site.categories[page.tag] %}
+      <div class="grids_of_4 grid1_of_4">
+        <div class="content_box">
+          <a href="{{ post.url }}">
+           <img src="{{ post.image_path }}/{{ post.special_image }}" class="img-responsive" alt=""/>
+         </a>
+         <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+         <p>{{ post.desc }}</p>
+         <div class="grid_1 simpleCart_shelfItem">
+           <div class="item_add"><span class="item_price"><h6>参考价：¥{{ post.discount_price }}</h6></span></div>
+           <div class="item_add"><span class="item_price"><a href="{{ post.url }}">查看详情</a></span></div>
+         </div>
+       </div>
+     </div>
+     {% endfor %}
+
+
+     <div class="clearfix"></div>
+   </div>
+   <!-- end grids_of_4 -->
+ </div>
+ <div class="clearfix"></div>
+ <!-- end content -->
+</div>
+</div>

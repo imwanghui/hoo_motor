@@ -1,0 +1,76 @@
+<!-- header_top -->
+<div class="top_bg">
+    <div class="container">
+        <div class="header_top">
+            <div class="top_right">
+                <ul>
+                    <li><a href="#">帮助中心</a></li>|
+                    <li><a href="/contact.html">联系方式</a></li>|
+                    <li><a href="#">物流发货</a></li>
+                </ul>
+            </div>
+                <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+<div class="header_bg">
+<div class="container">
+    <div class="header">
+    <div class="head-t">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" class="img-responsive" alt=""/> </a>
+        </div>
+        <!-- start header_right -->
+        <div class="header_right">
+            <div class="rgt-bottom" style="margin-bottom: 2em;">
+            <div class="create_btn" style="float: right;">
+                <a href="/contact.html">联系方式</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" value="" placeholder="search...">
+                <input type="submit" value="">
+            </form>
+        </div>
+        <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+        <!-- start header menu -->
+        <ul class="megamenu skyblue">
+            <li class="active grid"><a class="color10" href="/">首页</a></li>
+            {% for brand in site.data.brands %}
+                {% assign loopindex = forloop.index %}
+                <li class="grid"><a class="color{{loopindex}}" href="/c/{{brand.category}}">{{ brand.title }}</a>
+                <div class="megapanel">
+                    <div class="row">
+                        {% for set in brand.series %}
+                        <div class="col1">
+                            <div class="h_nav">
+                                <h4>{{ set.title }}</h4>
+                                <ul>
+                                    {% for post in site.categories.[set.category] %}
+                                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.color }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <div class="col2"></div>
+                        <div class="col1"></div>
+                        <div class="col1"></div>
+                        <div class="col1"></div>
+                        <div class="col1"></div>
+                    </div>
+                    </div>
+                </li>
+            {% endfor %}
+         </ul>
+    </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+- title: YAMAHA-雅马哈
+  category: yamaha
+  series:
+    - title: 天剑K
+      category: tj
+    - title: 北极光系列
+      category: bjg
+    - title: 地平线
+      category: dpx
+    - title: 福喜
+      category: fx
+
+- title: HAOJUE-豪爵
+  category: haojue
+  series:
+    - title: 钻豹
+      category: zb
+
+- title: HONDA-本田
+  category: honda
+  series:
+    - title: 小CB
+      category: cb
+
+- title: SUZUKI-铃木
+  category: suzuki
+- title: BMW-宝马
+  category: bmw
+
+- title: OTHERS-其他品牌
+  category: others
+  series:
+    - title: 春风
+      category: cf
+
+

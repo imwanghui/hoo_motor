@@ -1,0 +1,5 @@
+<div>
+{% for image in site.data.images.[page.image_group] %}
+  <img style="margin-bottom: 20px;" src="{{page.image_path}}/{{ image }}" class="img-responsive" title="" />
+{% endfor %}
+</div>
