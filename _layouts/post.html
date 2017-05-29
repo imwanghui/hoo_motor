@@ -11,8 +11,8 @@ layout: detail
                     <ul id="etalage">
                         {% for image in site.data.images[page.image_group] %}
                         <li>
-                            <img class="etalage_thumb_image" src="{{ page.image_path }}/{{ image }}" class="img-responsive" />
-                            <img class="etalage_source_image" src="{{ page.image_path }}/{{ image }}" class="img-responsive" title="" />
+                            <img class="etalage_thumb_image" src="{{ page.image_path | prepend: site.baseurl }}/{{ image }}" class="img-responsive" />
+                            <img class="etalage_source_image" src="{{ page.image_path | prepend: site.baseurl }}/{{ image }}" class="img-responsive" title="" />
                         </li>
                         {% endfor %}
                     </ul>

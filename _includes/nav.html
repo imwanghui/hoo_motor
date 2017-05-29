@@ -19,13 +19,13 @@
     <div class="header">
     <div class="head-t">
         <div class="logo">
-            <a href="/"><img src="/images/logo.png" class="img-responsive" alt=""/> </a>
+            <a href="{{ "/" | prepend: site.baseurl }}"><img src="{{ "/images/logo.png" | prepend: site.baseurl }}" class="img-responsive" alt=""/> </a>
         </div>
         <!-- start header_right -->
         <div class="header_right">
             <div class="rgt-bottom" style="margin-bottom: 2em;">
             <div class="create_btn" style="float: right;">
-                <a href="/contact.html">联系方式</a>
+                <a href="{{ "/contact.html" | prepend: site.baseurl }}">联系方式</a>
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -41,10 +41,10 @@
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="active grid"><a class="color10" href="/">首页</a></li>
+            <li class="active grid"><a class="color10" href="{{ "/" | prepend: site.baseurl }}">首页</a></li>
             {% for brand in site.data.brands %}
                 {% assign loopindex = forloop.index %}
-                <li class="grid"><a class="color{{loopindex}}" href="/c/{{brand.category}}">{{ brand.title }}</a>
+                <li class="grid"><a class="color{{loopindex}}" href="{{ site.baseurl }}/c/{{brand.category}}">{{ brand.title }}</a>
                 <div class="megapanel">
                     <div class="row">
                         {% for set in brand.series %}
